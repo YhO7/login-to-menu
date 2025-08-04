@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import restaurantHero from "@/assets/restaurant-hero.jpg";
+import { ChefHat } from "lucide-react";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -39,17 +39,15 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen relative flex items-center justify-center p-4">
-      {/* Hero Background */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${restaurantHero})` }}
-      />
-      <div className="absolute inset-0 bg-foreground/60" />
-      
+    <div className="min-h-screen bg-background flex items-center justify-center p-4">
       {/* Login Form */}
-      <Card className="w-full max-w-md relative z-10 shadow-2xl bg-card/95 backdrop-blur-sm">
-        <CardHeader className="text-center">
+      <Card className="w-full max-w-md shadow-elegant">
+        <CardHeader className="text-center space-y-4">
+          <div className="flex justify-center">
+            <div className="p-4 rounded-full bg-gradient-to-r from-primary to-primary-glow shadow-card">
+              <ChefHat className="h-8 w-8 text-primary-foreground" />
+            </div>
+          </div>
           <CardTitle className="text-3xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
             Bella Vista
           </CardTitle>
